@@ -1,8 +1,17 @@
 import { useEffect, useState } from "react";
 
-const API_URL = "http://localhost:5000/api/books";
-const MEMBERS_API_URL = "http://localhost:5000/api/members";
-const ISSUES_API_URL = "http://localhost:5000/api/issues";
+// =====================================================
+// DEPLOYED BACKEND API
+// =====================================================
+
+const API_URL =
+    "https://library-management-system-7zgz.onrender.com/api/books";
+
+const MEMBERS_API_URL =
+    "https://library-management-system-7zgz.onrender.com/api/members";
+
+const ISSUES_API_URL =
+    "https://library-management-system-7zgz.onrender.com/api/issues";
 
 function App() {
     const [activePage, setActivePage] = useState("Dashboard");
@@ -848,9 +857,7 @@ function App() {
     return (
         <div className="app">
 
-            {/* =================================================
-                SIDEBAR
-            ================================================= */}
+            {/* SIDEBAR */}
 
             <aside className="sidebar">
 
@@ -911,15 +918,11 @@ function App() {
 
             </aside>
 
-            {/* =================================================
-                MAIN CONTENT
-            ================================================= */}
+            {/* MAIN CONTENT */}
 
             <main className="main-content">
 
-                {/* =================================================
-                    HEADER
-                ================================================= */}
+                {/* HEADER */}
 
                 <header className="topbar">
 
@@ -957,9 +960,7 @@ function App() {
 
                 </header>
 
-                {/* =================================================
-                    DASHBOARD
-                ================================================= */}
+                {/* DASHBOARD */}
 
                 {activePage === "Dashboard" && (
 
@@ -981,8 +982,6 @@ function App() {
                             </div>
 
                         </div>
-
-                        {/* STATISTICS */}
 
                         <div className="stats-grid">
 
@@ -1108,8 +1107,6 @@ function App() {
 
                         </div>
 
-                        {/* QUICK ACTIONS */}
-
                         <div className="section-header">
 
                             <div>
@@ -1213,8 +1210,6 @@ function App() {
                             </button>
 
                         </div>
-
-                        {/* RECENT ACTIVITY */}
 
                         <div className="section-header recent-header">
 
@@ -1371,9 +1366,7 @@ function App() {
 
                 )}
 
-                {/* =================================================
-                    BOOKS
-                ================================================= */}
+                {/* BOOKS */}
 
                 {activePage === "Books" && (
 
@@ -1401,8 +1394,6 @@ function App() {
                             </button>
 
                         </div>
-
-                        {/* BOOK SEARCH AND FILTER */}
 
                         <div className="books-toolbar">
 
@@ -1615,8 +1606,6 @@ function App() {
 
                         </div>
 
-                        {/* BOOK FORM */}
-
                         {showBookForm && (
 
                             <div className="modal-overlay">
@@ -1769,9 +1758,7 @@ function App() {
 
                 )}
 
-                {/* =================================================
-                    MEMBERS
-                ================================================= */}
+                {/* MEMBERS */}
 
                 {activePage === "Members" && (
 
@@ -1799,8 +1786,6 @@ function App() {
                             </button>
 
                         </div>
-
-                        {/* MEMBER SEARCH */}
 
                         <div className="books-toolbar">
 
@@ -1948,8 +1933,6 @@ function App() {
 
                         </div>
 
-                        {/* MEMBER FORM */}
-
                         {showMemberForm && (
 
                             <div className="modal-overlay">
@@ -2088,9 +2071,7 @@ function App() {
 
                 )}
 
-                {/* =================================================
-                    ISSUE BOOK
-                ================================================= */}
+                {/* ISSUE BOOK */}
 
                 {activePage === "Issue Book" && (
 
@@ -2426,9 +2407,7 @@ function App() {
 
                 )}
 
-                {/* =================================================
-                    RETURN BOOK
-                ================================================= */}
+                {/* RETURN BOOK */}
 
                 {activePage === "Return Book" && (
 
@@ -2643,9 +2622,7 @@ function App() {
 
                 )}
 
-                {/* =================================================
-                    TRANSACTIONS
-                ================================================= */}
+                {/* TRANSACTIONS */}
 
                 {activePage === "Transactions" && (
 
@@ -2673,8 +2650,6 @@ function App() {
                             </button>
 
                         </div>
-
-                        {/* TRANSACTION SUMMARY */}
 
                         <div className="stats-grid">
 
@@ -2797,8 +2772,6 @@ function App() {
                             </div>
 
                         </div>
-
-                        {/* TRANSACTION SEARCH / FILTER */}
 
                         <div className="books-toolbar">
 
